@@ -1,0 +1,23 @@
+@for $i from 1 through 12 {
+   .col-#{$i} {
+      width: 100% / 12 * $i;
+   }
+}
+//для отображения колонн
+
+@for $i from 1 through 12 {
+   .FizzBuzz-#{$i} {
+      &::after{
+         @if $i % 2 == 0{
+            content: "#{$i}-Chetnoe";
+            background-color: black;
+         }
+         @else{
+            content: "#{$i}-Ne chetnoe";
+            background-color: red;
+         }
+         width: 100px*$i;
+         display: block;
+      }
+   }
+}
